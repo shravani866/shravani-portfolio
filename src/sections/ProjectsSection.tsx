@@ -125,7 +125,7 @@ export const ProjectsSection: React.FC = () => {
             Selected Work
           </h2>
           <p className="text-sm text-[#5C665E] max-w-xl font-normal leading-relaxed">
-            Explore hands-on software engineering projects across full-stack AI, machine learning forecasting, embedded IoT telemetry, autonomous robotics, and zero-knowledge cryptography.
+            Explore hands-on software engineering projects across healthcare operations, AI-enabled travel planning, and automated IoT sensor systems.
           </p>
         </div>
 

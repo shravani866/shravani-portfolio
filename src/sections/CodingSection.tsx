@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'motion/react'
-import { Code2, Trophy, Terminal, CheckCircle2 } from 'lucide-react'
+import { Code2, Trophy, Terminal, CheckCircle2, Award, Presentation } from 'lucide-react'
 
 // Viewport-animated counter component
 const ViewportCounter: React.FC<{ target: number; suffix?: string }> = ({ target, suffix = '' }) => {
@@ -43,13 +43,15 @@ export const CodingSection: React.FC = () => {
   const platforms = [
     {
       name: 'LeetCode',
-      profile: 'shravani866',
+      profile: 'shravaniumanabadi1',
+      url: 'https://leetcode.com/u/shravaniumanabadi1/',
       focus: 'Data Structures, Binary Trees, Arrays & Hash Maps',
       color: 'border-[#547259]/50 bg-[#1F2C21]',
     },
     {
       name: 'CodeChef',
       profile: 'shravani866',
+      url: 'https://www.codechef.com/',
       focus: 'Contest Math, Algorithmic Efficiency & Arrays',
       color: 'border-[#547259]/50 bg-[#1F2C21]',
     },
@@ -84,7 +86,7 @@ export const CodingSection: React.FC = () => {
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#39523D]/80 border border-[#547259]">
                 <Trophy className="w-3.5 h-3.5 text-[#D6E2D4]" />
                 <span className="text-xs font-mono-tech tracking-[0.2em] text-[#D6E2D4] uppercase font-semibold">
-                  CODING ACHIEVEMENT
+                  COMPETITIVE PROGRAMMING
                 </span>
               </div>
 
@@ -97,7 +99,7 @@ export const CodingSection: React.FC = () => {
               </div>
 
               <p className="text-sm sm:text-base text-[#D6E2D4] font-normal leading-relaxed max-w-lg">
-                Continuous competitive programming practice across <strong className="text-white">LeetCode</strong> and{' '}
+                Solved 100+ Data Structures and Algorithms problems across <strong className="text-white">LeetCode</strong> and{' '}
                 <strong className="text-white">CodeChef</strong>. Focused on algorithmic efficiency, asymptotic analysis,
                 and optimal space-time trade-offs.
               </p>
@@ -105,9 +107,12 @@ export const CodingSection: React.FC = () => {
               {/* Platforms Badges */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
                 {platforms.map((p) => (
-                  <div
+                  <a
                     key={p.name}
-                    className={`p-4 rounded-2xl border ${p.color} space-y-1`}
+                    href={p.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`p-4 rounded-2xl border ${p.color} space-y-1 block hover:border-[#BA8146]/60 transition-colors`}
                   >
                     <div className="flex items-center justify-between">
                       <span className="font-display font-bold text-lg text-white">
@@ -118,7 +123,7 @@ export const CodingSection: React.FC = () => {
                     <p className="text-[11px] font-mono-tech text-[#D6E2D4]">
                       {p.focus}
                     </p>
-                  </div>
+                  </a>
                 ))}
               </div>
             </div>
@@ -128,7 +133,7 @@ export const CodingSection: React.FC = () => {
               <div className="flex items-center justify-between pb-3 border-b border-[#39523D] text-xs font-mono-tech">
                 <span className="text-[#D6E2D4] font-bold uppercase tracking-wider flex items-center gap-2">
                   <Terminal className="w-4 h-4 text-[#7A997F]" />
-                  <span>ALGORITHMIC COMPETENCIES</span>
+                  <span>CORE CS COMPETENCIES</span>
                 </span>
                 <span className="text-[11px] text-[#A3B899]">Verified Practice</span>
               </div>
@@ -151,6 +156,39 @@ export const CodingSection: React.FC = () => {
               </div>
             </div>
 
+          </div>
+        </div>
+
+        {/* Hackathons & Exhibitions Section from Resume */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+          <div className="p-7 rounded-3xl bg-white border border-[#D1DDD0] hover:border-[#39523D]/50 hover:shadow-lg transition-all duration-300 text-left">
+            <div className="flex items-center gap-2 mb-2">
+              <Award className="w-4 h-4 text-[#BA8146]" />
+              <span className="text-[11px] font-mono-tech text-[#859088] uppercase tracking-wider font-semibold">
+                GLOBAL HACKATHON
+              </span>
+            </div>
+            <h4 className="text-xl font-display font-semibold text-[#19201A] mb-1">
+              HyperAPI Global Hackathon
+            </h4>
+            <p className="text-xs sm:text-sm text-[#515E54] leading-relaxed">
+              Competed in the HyperAPI Global Hackathon, developing collaborative cloud API microservices.
+            </p>
+          </div>
+
+          <div className="p-7 rounded-3xl bg-white border border-[#D1DDD0] hover:border-[#39523D]/50 hover:shadow-lg transition-all duration-300 text-left">
+            <div className="flex items-center gap-2 mb-2">
+              <Presentation className="w-4 h-4 text-[#39523D]" />
+              <span className="text-[11px] font-mono-tech text-[#859088] uppercase tracking-wider font-semibold">
+                PROJECT EXHIBITION
+              </span>
+            </div>
+            <h4 className="text-xl font-display font-semibold text-[#19201A] mb-1">
+              SCI-NOVA 2024 Project Exhibition
+            </h4>
+            <p className="text-xs sm:text-sm text-[#515E54] leading-relaxed">
+              Presented the Smart Irrigation System at the SCI-NOVA 2024 Project Exhibition.
+            </p>
           </div>
         </div>
 

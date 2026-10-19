@@ -6,7 +6,6 @@ import {
   Cloud,
   Database,
   Terminal,
-  Server,
   Layers,
   Sparkles,
   GitBranch,
@@ -16,45 +15,49 @@ import { SKILL_GROUPS } from '../data/resumeData'
 export const SkillsSection: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<string>('ALL')
 
-  // Top banner featured primary tools matching editorial design
+  // Top banner featured primary tools matching resume
   const featuredTools = [
     { name: 'Python', icon: Code2 },
     { name: 'Java', icon: Code2 },
     { name: 'C++', icon: Code2 },
-    { name: 'React', icon: Globe },
-    { name: 'TypeScript', icon: Code2 },
-    { name: 'FastAPI', icon: Server },
+    { name: 'C', icon: Code2 },
+    { name: 'JavaScript', icon: Globe },
+    { name: 'SQL', icon: Database },
     { name: 'AWS', icon: Cloud },
     { name: 'Google Cloud', icon: Cloud },
-    { name: 'Docker', icon: Server },
-    { name: 'PostgreSQL', icon: Database },
+    { name: 'Terraform', icon: Terminal },
+    { name: 'React', icon: Globe },
+    { name: 'Node.js', icon: Globe },
+    { name: 'MySQL', icon: Database },
+    { name: 'MongoDB', icon: Database },
     { name: 'Git', icon: GitBranch },
     { name: 'Linux', icon: Terminal },
+    { name: 'Bash', icon: Terminal },
   ]
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
-      case 'PROGRAMMING':
+      case 'PROGRAMMING LANGUAGES':
         return Code2
-      case 'WEB':
-        return Globe
-      case 'CLOUD & DEVOPS':
+      case 'CLOUD PLATFORMS':
         return Cloud
-      case 'DATABASES':
-        return Database
-      case 'TOOLS':
+      case 'DEVOPS & TOOLS':
         return Terminal
+      case 'DATABASES & FRAMEWORKS':
+        return Database
+      case 'CORE COMPUTER SCIENCE':
+        return Layers
       default:
         return Layers
     }
   }
 
   const categorySubtitles: Record<string, string> = {
-    'PROGRAMMING': 'Core languages applied in algorithmic problem solving & system engineering',
-    'WEB': 'Modern frontend libraries & performant RESTful backend runtimes',
-    'CLOUD & DEVOPS': 'Cloud hosting, containerization & automated deployment pipelines',
-    'DATABASES': 'Relational data modeling, NoSQL document stores & caching layers',
-    'TOOLS': 'Productivity environments, API testing & developer toolchains',
+    'PROGRAMMING LANGUAGES': 'Core languages for algorithm implementation, system programming & automation scripting',
+    'CLOUD PLATFORMS': 'Multi-cloud infrastructure across Amazon Web Services and Google Cloud Platform',
+    'DEVOPS & TOOLS': 'Infrastructure as code, version control, CI/CD pipelines & API testing',
+    'DATABASES & FRAMEWORKS': 'Modern frontend interfaces, backend runtimes, and relational & NoSQL data stores',
+    'CORE COMPUTER SCIENCE': 'Foundational computer science principles applied in rigorous engineering solutions',
   }
 
   const filteredGroups = activeCategory === 'ALL'
@@ -96,7 +99,7 @@ export const SkillsSection: React.FC = () => {
 
           {/* Right Subtitle */}
           <div className="hidden lg:flex items-center gap-2 text-xs font-mono-tech text-[#DCE7DA]/80 shrink-0">
-            <span>Verified in Code</span>
+            <span>Verified from Resume</span>
           </div>
         </div>
       </div>
@@ -118,7 +121,7 @@ export const SkillsSection: React.FC = () => {
                 Technical Toolkit
               </h2>
               <p className="text-sm text-[#5C665E] max-w-xl font-normal leading-relaxed">
-                Technologies and tools I work with across software engineering, cloud systems, and application architecture. Zero fabricated percentages — purely hands-on competencies.
+                Technologies, tools, and foundations organized directly from my resume across programming, cloud platforms, DevOps, databases, and core computer science.
               </p>
             </div>
 
@@ -202,9 +205,9 @@ export const SkillsSection: React.FC = () => {
                   <div className="mt-6 pt-4 border-t border-[#F2EFE9] flex items-center justify-between text-[11px] font-mono-tech text-[#7A8379]">
                     <span className="flex items-center gap-1.5 text-[#52664B]">
                       <Sparkles className="w-3 h-3 text-[#BA8146]" />
-                      <span>Hands-on practice</span>
+                      <span>Resume Verified</span>
                     </span>
-                    <span className="text-[10px] text-[#A6AEA4]">Verified</span>
+                    <span className="text-[10px] text-[#A6AEA4]">Accredited</span>
                   </div>
                 </motion.div>
               )

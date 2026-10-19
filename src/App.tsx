@@ -4,6 +4,7 @@ import { HeroSection } from './sections/HeroSection'
 import { AboutSection } from './sections/AboutSection'
 import { EngineeringFocusSection } from './sections/EngineeringFocusSection'
 import { SkillsSection } from './sections/SkillsSection'
+import { ExperienceSection } from './sections/ExperienceSection'
 import { ProjectsSection } from './sections/ProjectsSection'
 import { ArchitectureLab } from './sections/ArchitectureLab'
 import { EducationSection } from './sections/EducationSection'
@@ -28,38 +29,41 @@ export const App: React.FC = () => {
         {/* 3. About Section: Two-Column Editorial Profile & Academic Foundations */}
         <AboutSection />
 
-        {/* 4. Engineering Focus: 5 Core Software Engineering Disciplines */}
+        {/* 4. Engineering Focus: 4 Core Software Engineering Disciplines */}
         <EngineeringFocusSection />
 
         {/* 5. Technical Toolkit: 5 Grouped Categories (Zero Fake Percentages) */}
         <SkillsSection />
 
-        {/* 6. Selected Work: 5 Distinct Engineering Projects & Case Study Modal */}
+        {/* 6. Professional Experience: ToriiMinds (AI Ready Engineer & AWS Cloud Trainee) */}
+        <ExperienceSection />
+
+        {/* 7. Selected Work: 3 Resume Projects & Case Study Modal */}
         <ProjectsSection />
 
-        {/* 7. Architecture Lab: 5-Stage System Flow & Embedded IoT Simulation */}
+        {/* 8. Architecture Lab: 5-Stage System Flow & Embedded IoT Simulation */}
         <ArchitectureLab />
 
-        {/* 8. Education Section: NCET B.E. (8.58 CGPA) & St. Joseph PU (91.83%) */}
+        {/* 9. Education Section: NCET B.E. (8.58 CGPA) & St. Joseph PU (91.83%) */}
         <EducationSection />
 
-        {/* 9. Certifications: Verified AWS, GCP, Python & ML Credentials */}
+        {/* 10. Certifications: Verified AWS & GCP Credentials */}
         <CertificationsSection />
 
-        {/* 10. Coding Achievement: Animated 100+ Counter across LeetCode & CodeChef */}
+        {/* 11. Coding Achievement: Animated 100+ Counter across LeetCode & CodeChef */}
         <CodingSection />
 
-        {/* 11. Student Journey: Authentic Academic & Technical Milestones */}
+        {/* 12. Student Journey: Authentic Academic & Technical Milestones */}
         <JourneySection />
 
-        {/* 12. Resume Section: Direct PDF Document Access & Download */}
+        {/* 13. Resume Section: Direct PDF Document Access & Download */}
         <ResumeSection />
 
-        {/* 13. Contact Section: "LET'S BUILD SOMETHING MEANINGFUL." */}
+        {/* 14. Contact Section: "LET'S BUILD SOMETHING MEANINGFUL." */}
         <ContactSection />
       </main>
 
-      {/* 14. Minimal Luxury Editorial Footer */}
+      {/* 15. Minimal Luxury Editorial Footer */}
       <Footer />
     </div>
   )

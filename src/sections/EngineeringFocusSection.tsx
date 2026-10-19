@@ -8,28 +8,28 @@ export const EngineeringFocusSection: React.FC = () => {
       icon: Cloud,
       title: 'Cloud Architecture',
       description:
-        'Designing high-availability multi-tier VPC networks, automated scaling MIGs, and least-privilege IAM cloud infrastructure.',
-      href: '#projects',
+        'Setting up multi-zone VPC networks, subnets, least-privilege IAM roles, and AWS Lambda backend task automation.',
+      href: '#experience',
     },
     {
       icon: Sparkles,
-      title: 'AI & Machine Learning',
+      title: 'AI & LLM Workflows',
       description:
-        'Building predictive analytics models, sensor telemetry classification, and edge inference using Python and Scikit-learn.',
-      href: '#projects',
+        'Building and testing AI workflows using LangChain, ready-to-use LLM models, and connecting them to UIs via REST APIs.',
+      href: '#experience',
     },
     {
       icon: Monitor,
       title: 'Full-Stack Engineering',
       description:
-        'Crafting responsive, type-safe web applications with React, TypeScript, Tailwind CSS, Node.js, and modern RESTful APIs.',
+        'Developing responsive web applications with React, Node.js, Express, Flask, and RESTful APIs.',
       href: '#projects',
     },
     {
       icon: Cpu,
       title: 'Systems & IoT',
       description:
-        'Developing embedded microcontroller firmware, hysteresis telemetry loops, and automated sensor-driven irrigation logic.',
+        'Developing Arduino embedded firmware in C++, soil sensor telemetry loops, and automated irrigation pump control.',
       href: '#projects',
     },
   ]

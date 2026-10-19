@@ -3,417 +3,364 @@ import type { Project, ExperienceItem, Certification, SkillCategory } from '../t
 export const PERSONAL_INFO = {
   name: 'Shravani Umanabadi',
   preferredName: 'Shravani',
-  tagline: 'Computer Science Engineering Student • Software Engineering • Cloud • AI/ML',
+  tagline: 'Computer Science & Engineering Student • Software Development • Cloud • DevOps • AI',
   heroPreheading: "HELLO, I'M SHRAVANI",
   heroHeading: 'SHRAVANI UMANABADI',
-  heroRole: 'Computer Science Engineering Student',
-  heroSpecialization: 'Software Engineering • Cloud • AI/ML',
-  heroQuote: 'Building thoughtful digital experiences with code, cloud and intelligence.',
+  heroRole: 'Computer Science & Engineering Student',
+  heroSpecialization: 'Software Development • Cloud Computing • DevOps • AI',
+  heroQuote: 'Building reliable software, scalable cloud systems, and intelligent applications.',
   bioSummary:
-    'Computer Science & Engineering student at Nagarjuna College of Engineering & Technology with an 8.58 CGPA. Passionate about software engineering, cloud architecture, AI/ML systems, and rigorous algorithmic problem solving.',
+    'Computer Science and Engineering student at Nagarjuna College of Engineering and Technology (NCET), Bengaluru, with an 8.58 CGPA (Expected Graduation: 2027). Interested in software development, cloud computing, DevOps, and AI. Passionate about building web applications, designing multi-cloud solutions, automating workflows, and solving algorithmic problems.',
   location: 'Bengaluru, Karnataka, India',
   email: 'shravaniumanabadi9@gmail.com',
   phone: '+91 8660954261',
   linkedin: 'https://linkedin.com/in/shravani-umanabadi',
   github: 'https://github.com/shravani866',
+  leetcode: 'https://leetcode.com/u/shravaniumanabadi1/',
   resumeUrl: '/Shravani_Umanabadi_Resume.pdf',
   avatarCutoutUrl: '/shravani-cutout.png',
   avatarJpgUrl: '/shravani.jpg',
   stats: [
     { label: 'Academic CGPA', value: '8.58' },
-    { label: 'Problems Solved', value: '100+' },
+    { label: 'DSA Problems Solved', value: '100+' },
     { label: 'Class XII Score', value: '91.83%' },
     { label: 'Cloud Credentials', value: 'AWS & GCP' },
   ],
 }
 
-// 5 Actual Requested Projects (100% Unique, Real Student Work)
+// Spoken Languages from Resume
+export const LANGUAGES = [
+  { language: 'Kannada', proficiency: 'Native' },
+  { language: 'English', proficiency: 'Professional Working Proficiency' },
+]
+
+// Professional Experience from Resume
+export const EXPERIENCE_ITEMS: ExperienceItem[] = [
+  {
+    id: 'toriiminds-ai-engineer',
+    role: 'AI Ready Engineer',
+    company: 'ToriiMinds',
+    track: 'AI Engineering & LLM Integration',
+    period: '2026',
+    location: 'Bengaluru, India',
+    type: 'experience',
+    badge: 'ToriiMinds • 2026',
+    highlights: [
+      'Built and tested simple AI workflows using LangChain and ready-to-use LLM models.',
+      'Connected AI models to user interfaces using basic REST APIs to improve response accuracy.',
+    ],
+    skills: ['LangChain', 'LLM Models', 'REST APIs', 'AI Workflows', 'Prompt Integration'],
+  },
+  {
+    id: 'toriiminds-aws-trainee',
+    role: 'AWS Cloud Trainee',
+    company: 'ToriiMinds',
+    track: 'Cloud Architecture & Infrastructure Automation',
+    period: '2025',
+    location: 'Bengaluru, India',
+    type: 'experience',
+    badge: 'ToriiMinds • 2025',
+    highlights: [
+      'Set up secure virtual networks, subnets, and user access roles across multiple zones.',
+      'Automated backend tasks and cloud setups using basic Lambda functions and Bash scripts.',
+    ],
+    skills: ['AWS VPC', 'Subnets', 'IAM Roles', 'AWS Lambda', 'Bash Scripts', 'Multi-Zone Architecture'],
+  },
+]
+
+// 3 Projects from Resume
 export const PROJECTS: Project[] = [
   {
-    id: 'refill-bridge-ai',
+    id: 'refill-flow',
     projectNumber: '01',
-    title: 'Refill Bridge AI',
-    subtitle: 'AI-Powered Prescription Refill Workflow & Decision Support',
-    period: '2025 – 2026',
-    badge: 'AI & Healthcare Automation',
+    title: 'Refill Flow — Healthcare Refill Operations',
+    subtitle: 'Prescription Refill Portal & Automated Patient Reminder System',
+    period: '2026',
+    badge: 'Healthcare & Operations',
     category: 'ai',
     imageUrl: '/project-refill-ai.jpg',
-    stack: ['React', 'Node.js', 'Python', 'FastAPI', 'AWS Lambda', 'Tesseract OCR', 'Tailwind CSS'],
+    stack: ['React', 'Node.js', 'Python', 'Flask', 'AWS Lambda', 'RESTful APIs'],
     shortDescription:
-      'AI-powered prescription refill workflow and decision-support platform automating inventory alerts and patient medication schedules.',
+      'Built a portal for patients and clinics to request and track medicine refills, with automated reminder alerts to help patients reorder prescriptions on time.',
     problemStatement:
-      'Manual prescription tracking and fragmented pharmacy inventory management cause widespread medication stockouts, missed dosage refills, and heavy administrative overhead for clinic staff.',
+      'Patients and healthcare clinics frequently experience delayed prescription refills and missed medication schedules due to manual coordination and a lack of timely reorder alerts.',
     solution:
-      'Built an intelligent full-stack solution combining OCR for prescription dosage schedule extraction with predictive depletion modeling to notify patients and pharmacies well ahead of time.',
+      'Built a comprehensive portal for patients and clinics to request and track medicine refills seamlessly, integrating automated reminder alerts so patients can reorder prescriptions on time.',
     keyFeatures: [
-      'Optical character recognition extracting drug names, dosage schedules, and frequencies',
-      'Predictive medication depletion calculation for timely patient reminders',
-      'Serverless event-driven architecture using AWS Lambda and S3 triggers',
-      'Clean decision-support dashboard for pharmacists to review pending refills',
+      'Built a portal for patients and clinics to request and track medicine refills.',
+      'Added automated reminder alerts to help patients reorder prescriptions on time.',
+      'Streamlined clinic refill workflows with real-time request tracking.',
+      'Responsive, user-friendly interface for patients and healthcare administrators.',
     ],
     myContribution:
-      'Designed the OCR prescription parsing workflow, configured serverless event triggers, and developed the responsive pharmacist refill dashboard in React and Tailwind CSS.',
+      'Built the patient and clinic refill request portal, developed responsive UI components in React, and integrated automated alert triggers and RESTful API endpoints.',
     architectureDetails: [
-      'Prescription Upload → FastAPI Microservice with Tesseract OCR',
-      'Serverless Event Processing → AWS S3 + Lambda Document Store',
-      'Depletion Forecaster → Dynamic Rolling Inventory Calculation',
-      'Patient Notification Dispatcher → Timely Automated Alerts',
+      'Client Portal → Responsive React UI for Patients and Clinic Administrators',
+      'API Gateway → RESTful Endpoints handling refill requests and schedule tracking',
+      'Backend Automation → Serverless AWS Lambda & Python services managing notification schedules',
+      'Data Store → Structured tracking of active prescriptions, clinic queues, and refill timestamps',
     ],
     metrics: [
-      { label: 'Parsing Accuracy', value: '99.2%' },
-      { label: 'Refill Latency Reduction', value: '45%' },
-      { label: 'Stockout Mitigation', value: '98.5%' },
+      { label: 'Active User Groups', value: 'Patients & Clinics' },
+      { label: 'Refill Tracking', value: 'Real-Time' },
+      { label: 'Reminder Automation', value: 'Scheduled' },
     ],
     highlights: [
-      'Extracts pharmaceutical dosage schedules with 99.2% accuracy',
-      'Reduces manual prescription turnaround times by 45%',
-      'Eliminated unpredicted inventory stockouts across simulated trials',
+      'Built a portal for patients and clinics to request and track medicine refills',
+      'Added automated reminder alerts to help patients reorder prescriptions on time',
+      'Integrated real-time tracking for patients and clinic staff',
     ],
     githubUrl: 'https://github.com/shravani866',
   },
   {
-    id: 'placement-prediction',
+    id: 'ai-travel-planner',
     projectNumber: '02',
-    title: 'Cloud-Based Placement Prediction & Skill Gap Analyzer',
-    subtitle: 'Predictive ML Analytics & Skill Gap Recommendation Engine',
+    title: 'AI Enabled Travel Planner',
+    subtitle: 'Intelligent Trip Planning, Budget Estimation & Route Mapping',
     period: '2025',
-    badge: 'Machine Learning & Cloud Analytics',
+    badge: 'AI & Web Applications',
     category: 'ai',
-    imageUrl: '/project-placement.jpg',
-    stack: ['Python', 'Scikit-Learn', 'Streamlit', 'Pandas', 'NumPy', 'AWS EC2', 'Seaborn'],
+    imageUrl: '/project-cloud.jpg',
+    stack: ['Python', 'Flask', 'React', 'JavaScript', 'RESTful APIs'],
     shortDescription:
-      'End-to-end machine learning platform that evaluates academic metrics and coding skills to predict campus placement likelihood and generate targeted skill gap roadmaps.',
+      'Created a web application that uses AI to generate daily trip plans and budgets quickly, connecting maps and location data to show the best routes for users.',
     problemStatement:
-      'Engineering students frequently lack objective visibility into their hiring readiness, resulting in unfocused interview preparation and persistent technical skill deficits.',
+      'Planning multi-day travel itineraries and estimating realistic daily travel budgets manually is tedious and often leads to inefficient routes and unexpected expenses.',
     solution:
-      'Trained supervised ensemble classification models (Random Forest) on student metrics to predict placement probability and engineered an interactive diagnostic dashboard with radar charts.',
+      'Created a web application that uses AI to generate daily trip plans and budgets quickly, connecting maps and location data to show the best routes for users.',
     keyFeatures: [
-      'Supervised classification model predicting campus placement probability',
-      'Multi-dimensional radar charts visualizing algorithmic and technical proficiencies',
-      'Automated personalized curriculum roadmap generation for student remediation',
-      'Batch evaluation mode for university placement cells and career counselors',
+      'Created a web app that uses AI to generate daily trip plans and budgets quickly.',
+      'Connected maps and location data to show the best routes for users.',
+      'Automated daily itinerary generator tailored to user trip preferences.',
+      'Integrated dynamic budget calculation per day, travel mode, and destination.',
     ],
     myContribution:
-      'Engineered the data preprocessing pipeline, trained and cross-validated the Random Forest classification model, and built the interactive Streamlit diagnostic radar interface.',
+      'Developed the AI-driven itinerary generator, connected mapping services for route calculation, and designed the responsive web user interface.',
     architectureDetails: [
-      'Data Ingestion → Feature Normalization across 15+ Academic & DSA Metrics',
-      'Model Engine → Scikit-Learn Random Forest Classifier (88.5% Accuracy)',
-      'Visualization Tier → Dynamic Radar Chart Diagnostic & Gap Roadmaps',
-      'Cloud Deployment → Hosted on AWS EC2 with Streamlit Web Tier',
+      'Web Client → Interactive React and JavaScript frontend for destination search',
+      'Backend Service → Python & Flask RESTful API communicating with AI models',
+      'Maps Integration → Geolocation and route mapping integration for best travel paths',
+      'Budget Engine → Automated cost estimation per day and activity',
     ],
     metrics: [
-      { label: 'Model Prediction Accuracy', value: '88.5%' },
-      { label: 'F1 Classification Score', value: '0.89' },
-      { label: 'Student Diagnostic Profiles', value: '500+' },
+      { label: 'Itinerary Generation', value: 'Instant' },
+      { label: 'Route Mapping', value: 'Interactive' },
+      { label: 'Budget Precision', value: 'Optimized' },
     ],
     highlights: [
-      'Achieved 88.5% predictive accuracy across student validation splits',
-      'Simulated across 500+ student profiles with measurable skill enhancement',
-      'Automated personalized remediation roadmaps based on identified skill deficits',
+      'Created a web application that uses AI to generate daily trip plans and budgets quickly',
+      'Connected maps and location data to show the best routes for users',
+      'Automated travel plan generation and budget forecasting',
     ],
     githubUrl: 'https://github.com/shravani866',
   },
   {
     id: 'smart-irrigation-system',
     projectNumber: '03',
-    title: 'Soil Moisture Detection and Irrigation Alert System',
-    subtitle: 'Autonomous Telemetry & Hysteresis-Driven IoT Actuation Node',
+    title: 'Smart Automated Irrigation System',
+    subtitle: 'Sensor-Driven Soil Telemetry & Automated Pump Control',
     period: '2024',
-    badge: 'Embedded Systems & IoT',
+    badge: 'IoT & Embedded Systems',
     category: 'iot',
     imageUrl: '/project-iot.jpg',
-    stack: ['Embedded C++', 'Arduino', 'IoT Sensors', 'Relay Switching', 'Hysteresis Logic'],
+    stack: ['Arduino', 'C++', 'IoT Sensors', 'Relay Switching'],
     shortDescription:
-      'Autonomous embedded IoT node gathering continuous soil moisture telemetry and regulating water pump relay switching via threshold hysteresis.',
+      'Built a device using Arduino and soil sensors to check soil moisture automatically, programming the system to turn the water pump on and off to save water.',
     problemStatement:
-      'Conventional timer-based irrigation wastes up to 30% water and causes premature pump motor failure due to rapid relay chattering at boundary thresholds.',
+      'Conventional timer-based or manual agricultural watering wastes valuable water and risks plant damage due to insufficient or excessive irrigation without real-time soil feedback.',
     solution:
-      'Built a low-power Arduino monitoring node with capacitive soil sensors and custom embedded C++ firmware featuring dual-threshold hysteresis control to prevent relay oscillation.',
+      'Built a device using Arduino and soil sensors to check soil moisture automatically, and programmed the system to turn the water pump on and off to save water.',
     keyFeatures: [
-      'Continuous real-time soil moisture telemetry polled at 10-second intervals',
-      'Dual-threshold hysteresis control algorithm preventing relay chattering',
-      'Galvanically isolated relay driver circuitry interfacing high-voltage pump motors',
-      'Over 30% reduction in water consumption compared to timer setups',
+      'Built a device using Arduino and soil sensors to check soil moisture automatically.',
+      'Programmed the system to turn the water pump on and off to save water.',
+      'Autonomous soil moisture telemetry loop regulating pump relay state.',
+      'Presented and showcased live at the SCI-NOVA 2024 Project Exhibition.',
     ],
     myContribution:
-      'Wrote the embedded C++ firmware, implemented the threshold hysteresis algorithm, wired and calibrated the capacitive sensors with the Arduino microcontroller.',
+      'Assembled and calibrated the soil sensors with Arduino, wrote the embedded C++ control logic to regulate pump actuation, and defended the system at SCI-NOVA 2024.',
     architectureDetails: [
-      'Sensor Layer → Capacitive Soil Moisture Sensor (Analog Telemetry)',
-      'Microcontroller → Arduino UNO executing C++ Hysteresis State Machine',
-      'Actuation Tier → Optocoupled Relay Module triggering Submersible Pump',
-      'Monitoring Loop → Automated 10-Second Continuous Telemetry Scan',
+      'Telemetry Sensing → Analog soil moisture sensor continuously polling moisture values',
+      'Microcontroller → Arduino board executing embedded C++ threshold control loop',
+      'Relay Driver → Optocoupled relay module switching the water pump motor on and off',
+      'Water Conservation → Automated cut-off logic preventing excess water discharge',
     ],
     metrics: [
-      { label: 'Water Conservation', value: '>30%' },
-      { label: 'Test Simulation Cycles', value: '50+' },
-      { label: 'Relay Chattering Prevention', value: '100%' },
+      { label: 'Water Conservation', value: 'Significant' },
+      { label: 'Automation', value: '100% Autonomous' },
+      { label: 'Exhibition', value: 'SCI-NOVA 2024' },
     ],
     highlights: [
-      'Presented and exhibited at SCI-NOVA 2024 Project Showcase',
-      'Validated across 50+ rigorous test simulation cycles',
-      'Zero relay chattering achieved through dual-threshold logic',
-    ],
-    githubUrl: 'https://github.com/shravani866',
-  },
-  {
-    id: 'obstacle-avoiding-robot',
-    projectNumber: '04',
-    title: 'Obstacle Avoiding Robotic Car',
-    subtitle: 'Autonomous Microcontroller Obstacle Detection & Dynamic Steering System',
-    period: '2024',
-    badge: 'Robotics & Embedded Systems',
-    category: 'iot',
-    imageUrl: '/project-robotics.jpg',
-    stack: ['Embedded C++', 'Arduino UNO', 'Ultrasonic HC-SR04', 'Servo SG90', 'L298N Motor Driver'],
-    shortDescription:
-      'Autonomous 4-wheel robotic vehicle featuring a 180° servo-swept ultrasonic radar and dynamic obstacle avoidance algorithms in embedded C++.',
-    problemStatement:
-      'Mobile autonomous robots in unmapped environments risk collisions, hardware damage, and motor stalls without real-time spatial proximity awareness.',
-    solution:
-      'Designed an autonomous dual-motor robotic platform with a front-mounted HC-SR04 ultrasonic transducer on a sweep servo. Programmed an embedded C++ state machine to detect obstacles within 20cm and dynamically recalculate paths.',
-    keyFeatures: [
-      '180-degree servo-swept ultrasonic radar scanning left, center, and right',
-      'Real-time collision avoidance with sub-15ms proximity detection latency',
-      'L298N dual H-bridge motor driver supplying PWM speed modulation',
-      'Autonomous pivot steering and non-blocking trajectory recalibration',
-    ],
-    myContribution:
-      'Assembled the 4-wheel robot chassis, wired the L298N motor driver and servo motor, and developed the non-blocking obstacle-clearing state machine in C++.',
-    architectureDetails: [
-      'Proximity Sensor → HC-SR04 Ultrasonic Transducer on SG90 Servo',
-      'Processing Unit → Arduino UNO executing Radial Sweep & Distance Timing',
-      'Driver Circuit → L298N Dual H-Bridge Driver powering Geared DC Motors',
-      'Control Loop → Sub-15ms Proximity Detection and Pivot Steer State Machine',
-    ],
-    metrics: [
-      { label: 'Radar Sweep Angle', value: '180°' },
-      { label: 'Detection Range', value: '2cm – 400cm' },
-      { label: 'Response Latency', value: '<15ms' },
-    ],
-    highlights: [
-      'Engineered autonomous obstacle navigation without human intervention',
-      'Sub-15ms proximity response ensuring safe deceleration',
-      'Built rugged chassis with decoupled battery power isolation',
-    ],
-    githubUrl: 'https://github.com/shravani866',
-  },
-  {
-    id: 'zk-document-verification',
-    projectNumber: '05',
-    title: 'Digital Document Verification using SNARKs',
-    subtitle: 'Privacy-Preserving Zero-Knowledge Credential Authentication Pipeline',
-    period: '2025 – 2026',
-    badge: 'Applied Cryptography & Systems',
-    category: 'systems',
-    imageUrl: '/project-zk.jpg',
-    stack: ['Circom', 'SnarkJS', 'Zero-Knowledge Proofs (zk-SNARKs)', 'JavaScript', 'SHA-256', 'Groth16'],
-    shortDescription:
-      'Cryptographic credential verification pipeline using zk-SNARKs to prove academic document authenticity without exposing sensitive personal data.',
-    problemStatement:
-      'Traditional background checks and credential verifications force candidates to transmit unredacted transcripts and identity documents, creating severe privacy risks.',
-    solution:
-      'Engineered an end-to-end zero-knowledge verification framework using Circom arithmetic circuits and Groth16, allowing users to prove criteria (e.g. CGPA > threshold) in under 1.2s without sharing raw documents.',
-    keyFeatures: [
-      'Zero personal data leakage during academic and identity credential verification',
-      'Groth16 zk-SNARK proving system generating ultra-compact proof tokens (<256 bytes)',
-      'Fast mathematical proof verification executed in under 1.2 seconds',
-      'Client-side browser proof computation protecting raw documents from server exposure',
-    ],
-    myContribution:
-      'Designed the arithmetic constraint circuits in Circom, configured SHA-256 hashing and numerical threshold validation, and set up client-side proof generation.',
-    architectureDetails: [
-      'Document Hashing → SHA-256 Digest Computation on Client Device',
-      'Arithmetic Constraints → Circom Circuit enforcing Threshold Validation',
-      'Proof Generation → Groth16 Prover synthesizing Compact zk-SNARK Token',
-      'Verifier Tier → Instant Mathematical Verification (<1.2s) with 0 Data Leakage',
-    ],
-    metrics: [
-      { label: 'Data Leakage', value: '0%' },
-      { label: 'Verification Speed', value: '<1.2s' },
-      { label: 'Proof Token Size', value: '<256 B' },
-    ],
-    highlights: [
-      '100% elimination of sensitive personal record transmission during verification',
-      'Generates compact cryptographic proofs under 256 bytes',
-      'Sub-1.2 second proof verification overhead',
+      'Built a device using Arduino and soil sensors to check soil moisture automatically',
+      'Programmed the system to turn the water pump on and off to save water',
+      'Presented at the SCI-NOVA 2024 Project Exhibition',
     ],
     githubUrl: 'https://github.com/shravani866',
   },
 ]
 
-// Education Section
+// Education Section from Resume
 export const EDUCATION_MILESTONES: ExperienceItem[] = [
   {
     id: 'ncet-be-cse',
-    role: 'B.E. Computer Science Engineering',
-    company: 'Nagarjuna College of Engineering & Technology',
-    track: 'Bengaluru, Karnataka',
-    period: '2023 – Expected 2027',
+    role: 'Bachelor of Engineering (B.E.) in Computer Science and Engineering',
+    company: 'Nagarjuna College of Engineering and Technology (NCET)',
+    track: 'Bengaluru, India',
+    period: 'Expected 2027',
     location: 'Bengaluru, India',
     type: 'education',
-    badge: 'CGPA: 8.58',
+    badge: 'CGPA: 8.58 / 10',
     highlights: [
-      'B.E. Computer Science Engineering at Nagarjuna College of Engineering & Technology (NCET), maintaining an 8.58 CGPA.',
-      'Rigorous foundation in Data Structures & Algorithms, Operating Systems, Computer Networks, Database Management Systems, and Software Architecture.',
-      'Hands-on focus in cloud computing, machine learning, distributed systems, and real-time embedded applications.',
+      'Pursuing Bachelor of Engineering (B.E.) in Computer Science and Engineering at NCET Bengaluru.',
+      'Maintained a cumulative grade point average of 8.58/10.',
+      'Core Competencies: Data Structures & Algorithms, Computer Networks, Operating Systems, DBMS, System Architecture.',
     ],
-    skills: ['Data Structures', 'Algorithms', 'Operating Systems', 'Computer Networks', 'DBMS', 'Software Engineering'],
+    skills: [
+      'Data Structures & Algorithms',
+      'Computer Networks',
+      'Operating Systems',
+      'DBMS',
+      'System Architecture',
+    ],
   },
   {
     id: 'st-joseph-pu',
     role: 'Pre-University Course (Class XII)',
     company: 'St. Joseph PU College',
-    track: 'Vijayapura, Karnataka',
-    period: 'Completed 2023',
-    location: 'Vijayapura, Karnataka',
+    track: 'Vijayapura, India',
+    period: '2023',
+    location: 'Vijayapura, India',
     type: 'education',
     badge: 'Score: 91.83%',
     highlights: [
-      'Graduated with an outstanding academic record of 91.83% in Karnataka Pre-University Board examination.',
-      'Rigorous analytical foundations in Mathematics, Physics, Chemistry, and Computer Science.',
+      'Completed Pre-University Course (Class XII) with a score of 91.83% in 2023.',
+      'Built strong analytical foundations in Mathematics, Physics, Chemistry, and Computer Science.',
     ],
-    skills: ['Mathematics', 'Physics', 'Analytical Problem Solving', 'Logic Foundations'],
+    skills: ['Mathematics', 'Analytical Problem Solving', 'Logic & Foundations'],
   },
 ]
 
-// Certifications Section
+// Achievements & Certifications from Resume
 export const CERTIFICATIONS: Certification[] = [
   {
     id: 'aws-saa',
     title: 'AWS Certified Solutions Architect – Associate',
-    issuer: 'Amazon Web Services',
+    issuer: 'Amazon Web Services (AWS)',
     badgeText: 'AWS Certified',
-    skills: ['3-Tier VPC Architecture', 'High Availability', 'IAM Security', 'S3 & EC2', 'Cost Optimization'],
+    skills: ['EC2', 'S3', 'IAM', 'VPC', 'Lambda', 'CloudWatch'],
     description:
-      'Validates comprehensive expertise in designing secure, resilient, high-performing, and cost-optimized distributed systems on Amazon Web Services.',
+      'Validates expertise in designing secure, resilient, high-performing, and cost-optimized distributed cloud architectures on Amazon Web Services.',
   },
   {
     id: 'aws-aip',
     title: 'AWS Certified AI Practitioner',
-    issuer: 'Amazon Web Services',
+    issuer: 'Amazon Web Services (AWS)',
     badgeText: 'AWS Certified',
-    skills: ['Machine Learning', 'Generative AI', 'Responsible AI', 'Model Inference', 'Cloud AI Services'],
+    skills: ['Artificial Intelligence', 'Machine Learning', 'Generative AI', 'Responsible AI'],
     description:
-      'Demonstrates foundational understanding of artificial intelligence, machine learning concepts, and implementing responsible AI workflows on AWS.',
+      'Demonstrates foundational understanding of artificial intelligence and machine learning concepts and implementing AI workflows on AWS.',
   },
   {
     id: 'gcp-core',
-    title: 'Google Cloud Fundamentals: Core Infrastructure',
+    title: 'Google Cloud Fundamentals – Core Infrastructure',
     issuer: 'Google Cloud',
-    badgeText: 'GCP Certified Course',
-    skills: ['Compute Engine', 'Google VPC', 'Cloud Storage', 'Managed Instance Groups (MIG)', 'Cloud IAM'],
+    badgeText: 'Google Cloud',
+    skills: ['Compute Engine', 'Managed Instance Groups (MIG)', 'Cloud NAT', 'Cloud Run'],
     description:
-      'Covers core infrastructure capabilities, virtual networks, storage options, and compute services across Google Cloud Platform.',
-  },
-  {
-    id: 'ml-dl',
-    title: 'Machine Learning and Deep Learning',
-    issuer: 'Specialized Engineering Program',
-    badgeText: 'ML & Deep Learning',
-    skills: ['Supervised Learning', 'Neural Networks', 'Feature Engineering', 'Scikit-Learn', 'Evaluation Metrics'],
-    description:
-      'Rigorous training covering statistical data modeling, supervised/unsupervised machine learning, deep neural architectures, and model validation.',
-  },
-  {
-    id: 'postman-api',
-    title: 'Postman API Fundamentals – Student Expert',
-    issuer: 'Postman',
-    badgeText: 'Student Expert',
-    skills: ['RESTful Architecture', 'API Testing', 'Contract Validation', 'Automated Test Scripts', 'Mock Servers'],
-    description:
-      'Validates industry-standard skills in creating, executing, testing, and automating RESTful API test suites and request workflows.',
-  },
-  {
-    id: 'redhat-python',
-    title: 'Python Programming with Red Hat',
-    issuer: 'Red Hat',
-    badgeText: 'Red Hat Certified Training',
-    skills: ['Python Systems Programming', 'Object-Oriented Design', 'Linux Automation Scripts', 'Data Structures'],
-    description:
-      'Rigorous engineering training in enterprise Python software design, systems automation scripting, and Linux operating environment integration.',
+      'Covers core infrastructure capabilities, compute, networking, storage, and serverless container services across Google Cloud Platform.',
   },
 ]
 
-// All 23 Actual Technologies explicitly required
+// All Technologies from Resume
 export interface TechnologyItem {
   name: string
-  category: 'Languages' | 'Web & Frontend' | 'Backend & Runtimes' | 'Cloud & DevOps' | 'Databases & Storage' | 'Developer Tools'
+  category: 'Programming Languages' | 'Cloud Platforms' | 'DevOps & Tools' | 'Databases & Frameworks' | 'Core CS'
   highlight: string
 }
 
 export const ALL_TECHNOLOGIES: TechnologyItem[] = [
-  // Languages
-  { name: 'C', category: 'Languages', highlight: 'Low-level memory management & system fundamentals' },
-  { name: 'C++', category: 'Languages', highlight: 'Object-oriented systems & embedded hardware firmware' },
-  { name: 'Python', category: 'Languages', highlight: 'Automation scripts, backend services & ML models' },
-  { name: 'Java', category: 'Languages', highlight: 'Object-oriented architecture & software engineering' },
-  { name: 'JavaScript', category: 'Languages', highlight: 'Modern ES6+ asynchronous web application logic' },
+  // Programming Languages
+  { name: 'C', category: 'Programming Languages', highlight: 'System programming & foundational algorithms' },
+  { name: 'C++', category: 'Programming Languages', highlight: 'Object-oriented programming & embedded microcontroller firmware' },
+  { name: 'Python', category: 'Programming Languages', highlight: 'Scripting, backend services, LangChain & AI workflows' },
+  { name: 'Java', category: 'Programming Languages', highlight: 'Object-oriented software development & algorithms' },
+  { name: 'SQL', category: 'Programming Languages', highlight: 'Relational database queries, schemas & data operations' },
+  { name: 'JavaScript', category: 'Programming Languages', highlight: 'Modern asynchronous web application logic & interactive UI' },
+  { name: 'Bash', category: 'Programming Languages', highlight: 'Shell scripting, task automation & cloud provisioning' },
 
-  // Web & Frontend
-  { name: 'HTML', category: 'Web & Frontend', highlight: 'Semantic structure, web accessibility & modern HTML5' },
-  { name: 'CSS', category: 'Web & Frontend', highlight: 'Responsive layout systems, custom styling & animations' },
-  { name: 'React', category: 'Web & Frontend', highlight: 'Component-driven interactive UI & state management' },
+  // Cloud Platforms
+  { name: 'AWS (EC2, S3, IAM, VPC, Lambda, CloudWatch)', category: 'Cloud Platforms', highlight: 'Multi-zone networking, serverless compute, IAM roles & monitoring' },
+  { name: 'GCP (Compute Engine, MIG, Cloud NAT, Cloud Run)', category: 'Cloud Platforms', highlight: 'Compute Engine, Managed Instance Groups, Cloud NAT & Cloud Run' },
 
-  // Backend & Runtimes
-  { name: 'Node.js', category: 'Backend & Runtimes', highlight: 'Asynchronous event-driven server backend runtimes' },
+  // DevOps & Tools
+  { name: 'Terraform', category: 'DevOps & Tools', highlight: 'Declarative Infrastructure as Code (IaC) configuration' },
+  { name: 'Linux/Unix', category: 'DevOps & Tools', highlight: 'Operating system environments, CLI commands & server administration' },
+  { name: 'Git', category: 'DevOps & Tools', highlight: 'Distributed version control, branching & code collaboration' },
+  { name: 'GitHub Actions', category: 'DevOps & Tools', highlight: 'Automated CI/CD build, test & deployment pipelines' },
+  { name: 'CI/CD', category: 'DevOps & Tools', highlight: 'Continuous Integration & Continuous Deployment best practices' },
+  { name: 'RESTful APIs', category: 'DevOps & Tools', highlight: 'Stateless HTTP API design, integration & request handling' },
+  { name: 'Postman', category: 'DevOps & Tools', highlight: 'API endpoint testing, request validation & workflow testing' },
 
-  // Cloud & DevOps
-  { name: 'AWS', category: 'Cloud & DevOps', highlight: 'Certified Solutions Architect (VPC, EC2, S3, Lambda, IAM)' },
-  { name: 'Google Cloud', category: 'Cloud & DevOps', highlight: 'Core infrastructure, Compute Engine & multi-zone networks' },
-  { name: 'Terraform', category: 'Cloud & DevOps', highlight: 'Declarative Infrastructure as Code (IaC) provisioning' },
-  { name: 'GKE', category: 'Cloud & DevOps', highlight: 'Google Kubernetes Engine cluster management & deployments' },
-  { name: 'Cloud Run', category: 'Cloud & DevOps', highlight: 'Fully managed serverless container execution platform' },
-  { name: 'Cloud Functions', category: 'Cloud & DevOps', highlight: 'Event-driven serverless microservices & cloud hooks' },
+  // Databases & Frameworks
+  { name: 'MySQL', category: 'Databases & Frameworks', highlight: 'Relational schema design, normalization & transactional queries' },
+  { name: 'MongoDB', category: 'Databases & Frameworks', highlight: 'Document-oriented NoSQL database modeling & collections' },
+  { name: 'Node.js', category: 'Databases & Frameworks', highlight: 'Asynchronous event-driven backend server runtime' },
+  { name: 'Express', category: 'Databases & Frameworks', highlight: 'Minimalist web and API application framework for Node.js' },
+  { name: 'Flask', category: 'Databases & Frameworks', highlight: 'Lightweight Python WSGI web framework for microservices' },
+  { name: 'React', category: 'Databases & Frameworks', highlight: 'Component-driven interactive frontend UI & responsive state' },
 
-  // Databases & Storage
-  { name: 'MySQL', category: 'Databases & Storage', highlight: 'Relational schema normalization, indexing & ACID compliance' },
-  { name: 'MongoDB', category: 'Databases & Storage', highlight: 'Document-oriented NoSQL database modeling & aggregation' },
-  { name: 'BigQuery', category: 'Databases & Storage', highlight: 'Serverless petabyte-scale cloud data warehousing & SQL analytics' },
-  { name: 'Cloud SQL', category: 'Databases & Storage', highlight: 'Fully managed relational database service (MySQL/PostgreSQL)' },
-  { name: 'Bigtable', category: 'Databases & Storage', highlight: 'Massively scalable NoSQL database for low-latency operational workloads' },
-  { name: 'Spanner', category: 'Databases & Storage', highlight: 'Globally distributed, horizontally scalable strongly consistent relational DB' },
-
-  // Developer Tools
-  { name: 'Git', category: 'Developer Tools', highlight: 'Distributed version control, branching & merge workflows' },
-  { name: 'GitHub', category: 'Developer Tools', highlight: 'Collaborative development, repositories & CI/CD pipelines' },
-  { name: 'Postman', category: 'Developer Tools', highlight: 'Student Expert certified in REST API testing & automation' },
+  // Core CS Competencies
+  { name: 'Data Structures & Algorithms', category: 'Core CS', highlight: 'Optimal algorithmic problem solving, trees, graphs, sorting' },
+  { name: 'Computer Networks', category: 'Core CS', highlight: 'Network protocols, TCP/IP, OSI layers & routing concepts' },
+  { name: 'Operating Systems', category: 'Core CS', highlight: 'Process management, concurrency, memory allocation & file systems' },
+  { name: 'DBMS', category: 'Core CS', highlight: 'Database Management Systems, ACID properties, indexing & storage' },
+  { name: 'System Architecture', category: 'Core CS', highlight: 'Multi-tier application design, scalability & component cohesion' },
 ]
 
 export interface SkillGroup {
-  category: 'PROGRAMMING' | 'WEB' | 'CLOUD & DEVOPS' | 'DATABASES' | 'TOOLS'
+  category: string
   description: string
   skills: string[]
 }
 
+// 5 Skill Groups Organized Exactly from Resume
 export const SKILL_GROUPS: SkillGroup[] = [
   {
-    category: 'PROGRAMMING',
-    description: 'Core languages for algorithms, system fundamentals & automation scripting.',
-    skills: ['C', 'C++', 'Python', 'Java'],
+    category: 'PROGRAMMING LANGUAGES',
+    description: 'Core languages for algorithm implementation, system programming & automation scripting.',
+    skills: ['C', 'C++', 'Python', 'Java', 'SQL', 'JavaScript', 'Bash'],
   },
   {
-    category: 'WEB',
-    description: 'Modern responsive interfaces, component state & asynchronous runtimes.',
-    skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js'],
+    category: 'CLOUD PLATFORMS',
+    description: 'Multi-cloud infrastructure across Amazon Web Services and Google Cloud Platform.',
+    skills: [
+      'AWS: EC2, S3, IAM, VPC, Lambda, CloudWatch',
+      'GCP: Compute Engine, MIG, Cloud NAT, Cloud Run',
+    ],
   },
   {
-    category: 'CLOUD & DEVOPS',
-    description: 'Cloud architecture, infrastructure as code, containerization & serverless.',
-    skills: ['AWS', 'Google Cloud', 'Terraform', 'GKE', 'Cloud Run', 'Cloud Functions'],
+    category: 'DEVOPS & TOOLS',
+    description: 'Automation, infrastructure as code, CI/CD pipelines, and API testing toolchains.',
+    skills: ['Terraform', 'Linux/Unix', 'Git', 'GitHub Actions', 'CI/CD', 'RESTful APIs', 'Postman'],
   },
   {
-    category: 'DATABASES',
-    description: 'Relational data modeling, ACID schemas, NoSQL and cloud data stores.',
-    skills: ['MySQL', 'MongoDB', 'BigQuery', 'Cloud SQL', 'Bigtable', 'Spanner'],
+    category: 'DATABASES & FRAMEWORKS',
+    description: 'Modern frontend interfaces, backend runtimes, and relational & NoSQL databases.',
+    skills: ['MySQL', 'MongoDB', 'Node.js', 'Express', 'Flask', 'React'],
   },
   {
-    category: 'TOOLS',
-    description: 'Version control, collaborative repository management & REST API testing.',
-    skills: ['Git', 'GitHub', 'Postman'],
+    category: 'CORE COMPUTER SCIENCE',
+    description: 'Foundational computer science principles applied in rigorous engineering solutions.',
+    skills: [
+      'Data Structures & Algorithms',
+      'Computer Networks',
+      'Operating Systems',
+      'DBMS',
+      'System Architecture',
+    ],
   },
 ]
 
-// Student Professional Journey (Honest, Student-Specific — No Fake Employment)
+// Student Professional Journey matching Resume Milestones
 export interface JourneyStage {
   step: string
   pillar: string
@@ -429,168 +376,161 @@ export const STUDENT_JOURNEY: JourneyStage[] = [
   {
     step: '01',
     pillar: 'Engineering',
-    title: 'Computer Science & Engineering Foundations',
-    period: '2023 – Present',
+    title: 'Computer Science and Engineering Foundations',
+    period: 'Expected 2027',
     badge: 'NCET Bengaluru (CGPA 8.58)',
     description:
-      'Pursuing B.E. in Computer Science & Engineering at Nagarjuna College of Engineering & Technology, Bengaluru. Built rigorous mental models in Operating Systems, Computer Networks, Database Systems, and System Architecture.',
+      'Pursuing Bachelor of Engineering (B.E.) in Computer Science and Engineering at Nagarjuna College of Engineering and Technology (NCET), Bengaluru.',
     details: [
-      'Maintaining 8.58 CGPA across core engineering disciplines.',
-      'Coursework mastery: Data Structures, Analysis of Algorithms, Networking Protocols, and DBMS.',
-      'Pre-University foundation at St. Joseph PU College with a 91.83% score.',
+      'Maintaining 8.58/10 CGPA across core engineering disciplines.',
+      'Rigorous foundation in Data Structures & Algorithms, Computer Networks, Operating Systems, DBMS, and System Architecture.',
+      'Pre-University foundation at St. Joseph PU College with a 91.83% score in 2023.',
     ],
-    tags: ['Algorithms', 'Operating Systems', 'Networking', 'DBMS', 'Academic Rigor'],
+    tags: ['NCET Bengaluru', '8.58 CGPA', 'Class XII (91.83%)', 'Core CS'],
   },
   {
     step: '02',
-    pillar: 'Programming',
-    title: 'Low-Level Systems & Algorithmic Rigor',
-    period: '2023 – 2024',
-    badge: '100+ Problems Solved',
+    pillar: 'Cloud Experience',
+    title: 'AWS Cloud Trainee — ToriiMinds',
+    period: '2025',
+    badge: 'ToriiMinds',
     description:
-      'Mastered procedural and object-oriented programming in C, C++, Python, and Java. Developed solid algorithmic reflexes by solving over 100+ data structure problems across LeetCode and CodeChef.',
+      'Set up secure virtual networks, subnets, and user access roles across multiple zones. Automated backend tasks and cloud setups using basic Lambda functions and Bash scripts.',
     details: [
-      'Authored 100+ verified solutions across arrays, dynamic programming, trees, and graphs.',
-      'Proficiency in low-level memory handling in C and object-oriented architectures in Java.',
-      'Red Hat Python training for systems programming and script automation.',
+      'Configured multi-zone VPC networks, subnets, and granular IAM user access roles.',
+      'Automated routine backend tasks and cloud setups using basic Lambda functions and Bash scripts.',
     ],
-    tags: ['C', 'C++', 'Python', 'Java', 'LeetCode (100+)', 'CodeChef'],
+    tags: ['ToriiMinds', 'AWS VPC', 'Subnets', 'IAM', 'AWS Lambda', 'Bash Scripts'],
   },
   {
     step: '03',
-    pillar: 'Cloud Learning',
-    title: 'Multi-Cloud Architecture & Infrastructure as Code',
-    period: '2024 – 2026',
-    badge: 'AWS & GCP Hands-on',
+    pillar: 'AI Engineering',
+    title: 'AI Ready Engineer — ToriiMinds',
+    period: '2026',
+    badge: 'ToriiMinds',
     description:
-      'Deep-dived into enterprise cloud architecture across AWS and Google Cloud Platform. Practiced provisioning 3-tier VPC networks, Managed Instance Groups, load balancers, and Terraform IaC manifests.',
+      'Built and tested simple AI workflows using LangChain and ready-to-use LLM models. Connected AI models to user interfaces using basic REST APIs to improve response accuracy.',
     details: [
-      'Trained in AWS VPC, EC2, S3, IAM, CloudWatch, and Lambda serverless pipelines.',
-      'Studied Google Cloud Compute Engine, Cloud NAT, MIG, Cloud Run, GKE, and BigQuery.',
-      'Automated cloud provisioning using declarative Terraform templates and Bash scripts.',
+      'Built and evaluated prompt workflows using LangChain and ready-to-use LLM models.',
+      'Connected AI model endpoints to user interfaces via lightweight REST APIs for accurate responses.',
     ],
-    tags: ['AWS', 'Google Cloud', 'Terraform', 'VPC', 'Serverless', 'GKE', 'Cloud Run'],
+    tags: ['ToriiMinds', 'LangChain', 'LLM Models', 'REST APIs', 'AI Workflows'],
   },
   {
     step: '04',
-    pillar: 'AI/ML',
-    title: 'Applied Machine Learning & Intelligent Automation',
+    pillar: 'Projects',
+    title: 'Real-World Software, AI & IoT Systems',
     period: '2024 – 2026',
-    badge: 'AWS AI Practitioner',
+    badge: '3 Resume Projects',
     description:
-      'Specialized in statistical modeling, supervised classification, optical character recognition (OCR), and time-series depletion forecasting. Earned the AWS Certified AI Practitioner credential.',
+      'Developed practical engineering projects addressing healthcare refill management, AI-enabled travel planning, and automated agricultural water conservation.',
     details: [
-      'Trained supervised ensemble classifiers (Random Forest, Gradient Boosting) with 88.5% accuracy.',
-      'Integrated Tesseract OCR with FastAPI for automated medical dosage extraction in Refill Bridge AI.',
-      'Studied neural architectures, deep learning fundamentals, and responsible AI practices.',
+      'Refill Flow: Built a portal for patients and clinics to request/track medicine refills with automated reminders.',
+      'AI Enabled Travel Planner: Web app generating daily trip itineraries, budgets, and map routes via AI.',
+      'Smart Automated Irrigation System: Arduino and soil sensor device automating pump control to save water.',
     ],
-    tags: ['Scikit-Learn', 'AWS AI Practitioner', 'OCR', 'Ensemble ML', 'Predictive Analytics'],
+    tags: ['Refill Flow (2026)', 'AI Travel Planner (2025)', 'Smart Irrigation (2024)'],
   },
   {
     step: '05',
-    pillar: 'Projects',
-    title: 'End-to-End System Development',
+    pillar: 'Certifications',
+    title: 'AWS & Google Cloud Certifications',
     period: '2024 – 2026',
-    badge: '5 Production-Grade Systems',
+    badge: 'Verified Credentials',
     description:
-      'Engineered complete real-world software, IoT, and cryptographic applications from scratch — solving healthcare inventory stockouts, campus placement skill gaps, agricultural water waste, and credential privacy.',
+      'Earned industry certifications validating solutions architecture, artificial intelligence fundamentals, and cloud core infrastructure.',
     details: [
-      'Refill Bridge AI: Event-driven pharmacy inventory forecasting & patient alerts.',
-      'Placement Prediction: ML analytics platform with competency radar diagnostic mapping.',
-      'Soil Moisture & Irrigation: Embedded hysteresis node saving >30% irrigation water.',
-      'Obstacle Avoiding Car: 180° ultrasonic radar mobile robot with dynamic motor steering.',
-      'Digital Document Verification: Zero-knowledge credential proofs using Circom & Groth16.',
+      'AWS Certified Solutions Architect – Associate (Amazon Web Services)',
+      'AWS Certified AI Practitioner (Amazon Web Services)',
+      'Google Cloud Fundamentals – Core Infrastructure (Google Cloud)',
     ],
-    tags: ['Refill Bridge AI', 'Placement Predictor', 'Smart Irrigation', 'Obstacle Car', 'zk-SNARKs'],
+    tags: ['AWS SAA', 'AWS AIP', 'Google Cloud Core'],
   },
   {
     step: '06',
-    pillar: 'Hackathons',
-    title: 'Competitive Innovation & Project Exhibitions',
-    period: '2024 – 2025',
-    badge: 'SCI-NOVA 2024 & HyperAPI',
+    pillar: 'Competitive Coding',
+    title: '100+ Problems Solved on LeetCode & CodeChef',
+    period: '2023 – 2026',
+    badge: '100+ Problems Solved',
     description:
-      'Showcased engineering research and built high-pressure solutions in competitive arenas and technical exhibitions.',
+      'Solved 100+ Data Structures and Algorithms problems across LeetCode and CodeChef, focusing on algorithmic efficiency and problem solving.',
     details: [
-      'Presented and defended the Smart Automated Irrigation System live at the SCI-NOVA 2024 Exhibition.',
-      'Competed in the HyperAPI Global Hackathon, developing collaborative API microservices.',
-      'Engaged with peer engineering communities on systems architecture and cloud tooling.',
+      'Practiced arrays, two pointers, strings, binary trees, graphs, and dynamic programming.',
+      'Continuous algorithmic practice with optimal time and space complexity.',
     ],
-    tags: ['SCI-NOVA 2024', 'HyperAPI Hackathon', 'Technical Defense', 'Peer Collaboration'],
+    tags: ['LeetCode', 'CodeChef', 'Data Structures', 'Algorithms', '100+ Solved'],
   },
   {
     step: '07',
-    pillar: 'Certifications',
-    title: 'Industry-Standard Verified Credentials',
-    period: '2024 – 2026',
-    badge: '6 Verified Certifications',
+    pillar: 'Hackathons',
+    title: 'Hackathons & Project Exhibitions',
+    period: '2024 – 2025',
+    badge: 'HyperAPI & SCI-NOVA 2024',
     description:
-      'Validated skills through globally recognized certification exams from AWS, Google Cloud, Postman, and Red Hat.',
+      'Competed in the HyperAPI Global Hackathon and presented the Smart Irrigation System at the SCI-NOVA 2024 Project Exhibition.',
     details: [
-      'AWS Certified Solutions Architect – Associate (High-availability distributed architecture)',
-      'AWS Certified AI Practitioner (Machine Learning and Generative AI)',
-      'Google Cloud Fundamentals: Core Infrastructure',
-      'Machine Learning and Deep Learning (Specialized Engineering Program)',
-      'Postman API Fundamentals – Student Expert',
-      'Python Programming with Red Hat',
+      'Competed in the HyperAPI Global Hackathon developing API-driven integrations.',
+      'Presented the Smart Automated Irrigation System at the SCI-NOVA 2024 Project Exhibition.',
     ],
-    tags: ['AWS SAA', 'AWS AIP', 'GCP Core', 'ML/DL', 'Postman Expert', 'Red Hat Python'],
+    tags: ['HyperAPI Hackathon', 'SCI-NOVA 2024', 'Project Defense'],
   },
 ]
 
 export const SKILL_CATEGORIES: SkillCategory[] = [
   {
-    category: 'Languages',
-    description: 'System programming, scripting, and enterprise application development',
+    category: 'Programming Languages',
+    description: 'Core languages for algorithm design, software development & automation scripting',
     skills: [
-      { name: 'C', highlight: 'Low-level memory management' },
-      { name: 'C++', highlight: 'Object-oriented systems & firmware' },
-      { name: 'Python', highlight: 'Automation scripts & ML models' },
-      { name: 'Java', highlight: 'Object-oriented enterprise systems' },
-      { name: 'JavaScript', highlight: 'Modern asynchronous web applications' },
+      { name: 'C', highlight: 'System programming & memory fundamentals' },
+      { name: 'C++', highlight: 'Object-oriented programming & microcontroller firmware' },
+      { name: 'Python', highlight: 'Backend services, automation scripts & AI models' },
+      { name: 'Java', highlight: 'Object-oriented application architecture' },
+      { name: 'SQL', highlight: 'Relational database schemas & queries' },
+      { name: 'JavaScript', highlight: 'Modern asynchronous frontend & backend logic' },
+      { name: 'Bash', highlight: 'Shell scripting & cloud environment automation' },
     ],
   },
   {
-    category: 'Web & Frontend',
-    description: 'Modern responsive web interfaces and accessibility',
+    category: 'Cloud Platforms',
+    description: 'Multi-cloud infrastructure across Amazon Web Services and Google Cloud',
     skills: [
-      { name: 'HTML', highlight: 'Semantic structure & web accessibility' },
-      { name: 'CSS', highlight: 'Responsive layout systems & animations' },
-      { name: 'React', highlight: 'Component-driven interactive UI' },
+      { name: 'AWS', highlight: 'EC2, S3, IAM, VPC, Lambda, CloudWatch' },
+      { name: 'GCP', highlight: 'Compute Engine, MIG, Cloud NAT, Cloud Run' },
     ],
   },
   {
-    category: 'Cloud & DevOps',
-    description: 'Multi-cloud architecture, provisioning, and containers',
+    category: 'DevOps & Tools',
+    description: 'Infrastructure automation, CI/CD pipelines & API testing',
     skills: [
-      { name: 'AWS', highlight: 'Certified Solutions Architect (VPC, EC2, S3, IAM)' },
-      { name: 'Google Cloud', highlight: 'Core infrastructure & Compute Engine' },
-      { name: 'Terraform', highlight: 'Declarative Infrastructure as Code' },
-      { name: 'GKE', highlight: 'Kubernetes Engine cluster management' },
-      { name: 'Cloud Run', highlight: 'Serverless container execution' },
-      { name: 'Cloud Functions', highlight: 'Event-driven serverless functions' },
+      { name: 'Terraform', highlight: 'Infrastructure as Code provisioning' },
+      { name: 'Linux/Unix', highlight: 'Operating system CLI & server environments' },
+      { name: 'Git & GitHub', highlight: 'Distributed version control & collaboration' },
+      { name: 'GitHub Actions', highlight: 'CI/CD automated workflows' },
+      { name: 'RESTful APIs', highlight: 'HTTP service communication' },
+      { name: 'Postman', highlight: 'API endpoint testing & verification' },
     ],
   },
   {
-    category: 'Databases & Storage',
-    description: 'Relational, document, and analytical cloud databases',
+    category: 'Databases & Frameworks',
+    description: 'Relational and NoSQL data stores alongside modern application frameworks',
     skills: [
-      { name: 'MySQL', highlight: 'Relational schema normalization & ACID' },
-      { name: 'MongoDB', highlight: 'Document-oriented NoSQL modeling' },
-      { name: 'BigQuery', highlight: 'Serverless cloud data warehousing' },
-      { name: 'Cloud SQL', highlight: 'Managed MySQL and PostgreSQL' },
-      { name: 'Bigtable', highlight: 'High-throughput low-latency NoSQL' },
-      { name: 'Spanner', highlight: 'Globally distributed relational DB' },
+      { name: 'MySQL', highlight: 'Relational schema design & transactional integrity' },
+      { name: 'MongoDB', highlight: 'NoSQL document data modeling' },
+      { name: 'Node.js', highlight: 'Asynchronous event-driven server runtime' },
+      { name: 'Express', highlight: 'Web application backend framework' },
+      { name: 'Flask', highlight: 'Python microservice web framework' },
+      { name: 'React', highlight: 'Component-driven interactive user interfaces' },
     ],
   },
   {
-    category: 'Developer Tools',
-    description: 'Version control and API testing suites',
+    category: 'Core Computer Science',
+    description: 'Foundational computer science principles applied in engineering solutions',
     skills: [
-      { name: 'Git', highlight: 'Distributed version control & branching' },
-      { name: 'GitHub', highlight: 'Repositories & CI/CD workflows' },
-      { name: 'Postman', highlight: 'Student Expert certified in API testing' },
+      { name: 'Data Structures & Algorithms', highlight: 'Optimal time and space problem solving' },
+      { name: 'Computer Networks', highlight: 'Protocols, TCP/IP, OSI layers & routing' },
+      { name: 'Operating Systems', highlight: 'Processes, concurrency & memory management' },
+      { name: 'DBMS', highlight: 'Database management systems & ACID principles' },
+      { name: 'System Architecture', highlight: 'Multi-tier modular application design' },
     ],
   },
 ]
-

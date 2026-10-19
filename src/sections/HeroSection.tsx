@@ -48,7 +48,7 @@ export const HeroSection: React.FC = () => {
 
             {/* Sub-paragraph */}
             <p className="text-base sm:text-lg text-[#555E57] max-w-lg font-normal leading-relaxed">
-              Computer Science Engineering Student passionate about Software Engineering, Cloud Architecture, and AI/ML systems.
+              Computer Science and Engineering student passionate about software development, cloud computing, DevOps, and AI.
             </p>
 
             {/* Action Buttons: VIEW MY WORK & DOWNLOAD RESUME */}

@@ -24,7 +24,7 @@ export const CertificationsSection: React.FC = () => {
           </div>
 
           <p className="text-sm sm:text-base font-display italic text-[#515E54] max-w-md leading-relaxed">
-            “Verified certifications across AWS solutions architecture, machine learning, Google Cloud infrastructure, API design, and enterprise Python.”
+            “Verified certifications across AWS solutions architecture, artificial intelligence, and Google Cloud core infrastructure.”
           </p>
         </div>
 

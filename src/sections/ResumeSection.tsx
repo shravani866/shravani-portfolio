@@ -75,28 +75,42 @@ export const ResumeSection: React.FC = () => {
                 <div className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-4 h-4 text-[#39523D] shrink-0 mt-0.5" />
                   <span>
-                    <strong>Education:</strong> B.E. Computer Science Engineering, NCET Bengaluru (8.58 CGPA)
+                    <strong>Experience:</strong> AI Ready Engineer (2026) & AWS Cloud Trainee (2025) at ToriiMinds
                   </span>
                 </div>
 
                 <div className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-4 h-4 text-[#39523D] shrink-0 mt-0.5" />
                   <span>
-                    <strong>Certifications:</strong> AWS Solutions Architect & AWS AI Practitioner
+                    <strong>Education:</strong> B.E. CSE, NCET Bengaluru (8.58 CGPA) • Class XII (91.83%)
                   </span>
                 </div>
 
                 <div className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-4 h-4 text-[#39523D] shrink-0 mt-0.5" />
                   <span>
-                    <strong>Problem Solving:</strong> 100+ Problems Solved on LeetCode & CodeChef
+                    <strong>Certifications:</strong> AWS Solutions Architect, AWS AI Practitioner, Google Cloud
                   </span>
                 </div>
 
                 <div className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-4 h-4 text-[#39523D] shrink-0 mt-0.5" />
                   <span>
-                    <strong>Core Stack:</strong> C, C++, Python, Java, AWS, GCP, React, Node.js, SQL
+                    <strong>Problem Solving:</strong> 100+ DSA Problems Solved on LeetCode & CodeChef
+                  </span>
+                </div>
+
+                <div className="flex items-start gap-2.5">
+                  <CheckCircle2 className="w-4 h-4 text-[#39523D] shrink-0 mt-0.5" />
+                  <span>
+                    <strong>Languages:</strong> Kannada (Native) • English (Professional Working Proficiency)
+                  </span>
+                </div>
+
+                <div className="flex items-start gap-2.5">
+                  <CheckCircle2 className="w-4 h-4 text-[#39523D] shrink-0 mt-0.5" />
+                  <span>
+                    <strong>Core Stack:</strong> C, C++, Python, Java, AWS, GCP, Terraform, React, Node.js, SQL
                   </span>
                 </div>
               </div>

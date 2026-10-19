@@ -70,6 +70,11 @@ export const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
+                <a href="#experience" className="hover:text-[#BA8146] transition-colors">
+                  Work Experience
+                </a>
+              </li>
+              <li>
                 <a href="#projects" className="hover:text-[#BA8146] transition-colors">
                   Selected Work
                 </a>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'motion/react'
-import { GraduationCap, Code2, Sparkles, Layers } from 'lucide-react'
+import { GraduationCap, Code2, Briefcase, Languages } from 'lucide-react'
 
 export const AboutSection: React.FC = () => {
   const highlights = [
@@ -15,14 +15,14 @@ export const AboutSection: React.FC = () => {
       subtitle: 'LeetCode & CodeChef Algorithmic Rigor',
     },
     {
-      icon: Layers,
-      title: 'B.E. Computer Science',
-      subtitle: 'Nagarjuna College of Eng. & Tech.',
+      icon: Briefcase,
+      title: 'ToriiMinds Experience',
+      subtitle: 'AI Ready Engineer & AWS Cloud Trainee',
     },
     {
-      icon: Sparkles,
-      title: 'Core Technical Focus',
-      subtitle: 'Software Eng • Cloud • AI/ML • Web Dev',
+      icon: Languages,
+      title: 'Languages',
+      subtitle: 'Kannada (Native) • English (Professional)',
     },
   ]
 
@@ -70,9 +70,9 @@ export const AboutSection: React.FC = () => {
               Software is not just what it looks like, it's how it works.
             </h2>
 
-            {/* Honest Student Narrative */}
+            {/* Beginner-friendly, professional introduction */}
             <p className="text-sm sm:text-base text-[#576058] leading-relaxed">
-              I am a Computer Science and Engineering student at <strong className="text-[#1F2421] font-semibold">Nagarjuna College of Engineering & Technology</strong> with an <strong className="text-[#1F2421] font-semibold">8.58 CGPA</strong> (Expected Graduation: 2027). I focus on building reliable software systems, exploring cloud infrastructure, and applying machine learning to practical problems. I enjoy solving algorithmic challenges and turning ideas into clean, functional applications.
+              I am a Computer Science and Engineering student at <strong className="text-[#1F2421] font-semibold">Nagarjuna College of Engineering & Technology (NCET)</strong>, Bengaluru, with an <strong className="text-[#1F2421] font-semibold">8.58 CGPA</strong> (Expected Graduation: 2027). I focus on software development, cloud computing, DevOps, and AI. With industry experience as an AWS Cloud Trainee and AI Ready Engineer at ToriiMinds, and 100+ problems solved across LeetCode and CodeChef, I enjoy developing reliable software, automating cloud workflows, and applying modern AI solutions.
             </p>
 
             {/* Cursive Signature in Warm Gold */}
